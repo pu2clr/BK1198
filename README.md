@@ -1,4 +1,4 @@
-# BK1198 Arduino Libraty
+# BK1198 Arduino Library
 
 The BK1198 is a highly integrated digital signal processor (DSP) designed for AM/FM radio reception. Manufactured by Beken Corporation, it is a cost-effective solution commonly used in low-cost consumer radios, offering excellent performance with minimal external components. The BK1198 provides a simplified design for manufacturers while delivering high-quality audio reception across various radio bands.
 One of the standout features of the BK1198 is its digital interface, which allows seamless communication with microcontrollers via the I2C protocol. This enables developers to control the radio’s settings programmatically, offering flexibility for custom applications.

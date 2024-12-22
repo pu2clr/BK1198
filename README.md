@@ -11,6 +11,25 @@ Customization and Automation: This digital control capability makes the BK1198 s
 
 This project is about an Arduino library for the BK1168 and is still under development, therefore not yet functional. At the moment, the author of this project has not obtained the necessary documentation to program the BK1198. The attempts to advance the project have been based on the author's experience with the BK1088.
 
+
+## Main Features According to the Datasheet
+
+1. **Supports FM frequency range from 60 to 112 MHz** - Allows tuning to FM radio stations within this range.  
+2. **Supports AM frequency range from 504 to 1750 kHz** - Can tune to AM radio stations within this range.  
+3. **Supports shortwave frequency range from 2.2 to 23 MHz** -  Enables listening to shortwave radio broadcasts.  
+4. **Flexible configuration of operating modes** -  The device can be customized for different operating modes.  
+5. **Automatic FM stereo/mono switching** -  Automatically switches between stereo and mono depending on signal quality.  
+6. **Automatic noise suppression** -  Reduces noise automatically to improve audio quality.  
+7. **Supports tuning with potentiometer or encoder** - Allows frequency tuning using a potentiometer or rotary encoder.  
+8. **Channel adjustment by buttons (SSOP24 model)** - Enables station changes using buttons.  
+9. **Digital frequency display function** - Displays the tuned frequency on a digital screen.  
+10. **Line-in audio input (SSOP24 model)** - Includes an auxiliary input to connect other audio sources.  
+11. **Operating voltage from 1.8 to 3.6 V** - Works with a low power supply between 1.8 and 3.6 volts.  
+12. **Operating voltage from 1.8 to 3.6 V** - (Repeated for consistency).  
+13. **LED indication for radio and stereo (SSOP24 model)** - The device can light LEDs to indicate stereo mode or radio signal reception.  
+14. **Available in 24-pin SSOP and 16-pin SOP packages** - The chip is available in two different sizes depending on the application.  
+
+
 UNDER CONSTRUCTION...
 
 

@@ -13,6 +13,9 @@ Antes de iniciar qualquer modificação, é importante ter em mente que essa ope
 
 Antes de colocar a mão na massa, busque o máximo de conhecimento possível sobre o **BK1198**. Recomendo a leitura detalhada do **datasheet** do dispositivo, pois ele contém informações técnicas essenciais. Para acessar esse documento, uma simples busca no Google utilizando a string **"BK1198 Datasheet"** deve ser suficiente. A compreensão das especificações do DSP é um passo crítico para realizar a modificação com segurança.  
 
+**IMPORTANTE:**  
+*Alguns receptores podem ter o código do CI raspado, dificultando sua identificação direta. Nesses casos, será necessário analisar o circuito para confirmar se o dispositivo utilizado é realmente o **BK1198**. O datasheet do BK1198 pode ser uma ferramenta valiosa para auxiliar nesse processo de identificação.*
+
 ### 3. Localizando os Pinos-Chave  
 
 Após desmontar o rádio, é necessário localizar **o pino 1 e o pino 15 do BK1198** na placa do dispositivo. Esses pinos serão fundamentais para o processo de modificação, pois são responsáveis pela seleção das bandas de frequência.  
@@ -20,13 +23,30 @@ Após desmontar o rádio, é necessário localizar **o pino 1 e o pino 15 do BK1
 ### 4. Desabilitação do Banco de Resistores  
 O próximo passo é **desabilitar o banco de resistores** que compõe o divisor de tensão responsável pela seleção original de bandas (AM/FM). Esse circuito impede que novas bandas, como Ondas Curtas, sejam sintonizadas.  
 
+![Nova Chave de Onda](./../../Images/Modification/RX_01/ZFINAL04.jpg)
+
+Observe na figura anterior que as trilhas da placa  do banco de resistores foram cortadas. 
+
+
 ### 5. Remoção da Chave de Onda Original  
 
 Se o rádio possuir uma chave de onda (switch AM/FM), considere **removê-la**. A substituição por uma chave personalizada permitirá a inclusão da faixa de Ondas Curtas.  
 
+
 ### 6. Montagem da Nova Chave de Onda  
 
 Monte a nova chave de onda conforme o diagrama que será apresentado a seguir. Essa chave permitirá alternar entre diferentes bandas (AM, FM e SW).  
+
+![Nova Chave de Onda](./../../Images/Modification/RX_01/BASIC_CIRCUIT_WITH_VOLTAGE_DIVIDER.jpg)
+
+#### Exemplo
+
+![Um Exemplo utilizando uma banda de FM, uma banda de AM e duas de OC](./../../Images/Modification/RX_01/CHAVE_01.jpg)
+
+#### Dica
+
+É possível substituir a chave de onda por um potenciômetro de 500K ou 1000K. No entanto, isso pode dificultar a identificação precisa da banda selecionada, tornando o ajuste menos intuitivo.
+
 
 ### 7. Conexão da Nova Chave de Onda  
 

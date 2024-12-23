@@ -5,6 +5,7 @@ Endereço I2C = 0x80
 
 Registradores:
 
+As of now, despite the extensive documentation provided by BEKEN (for which I am grateful), the organization of registers 00 to 0x16 remains unclear. Some documents suggest that these registers may share the same structure as those in the BK1080/88. Therefore, to begin this project, I will assume that registers 00 to 0x15 on the BK1198 are equivalent to those on the BK1080/88. As I delve deeper into the BK1198 documentation, I will make any necessary adjustments.
 
 
 | Register  | Register2 | Description | Value(HEX) | Value(DEC) |  NOTE                         |          

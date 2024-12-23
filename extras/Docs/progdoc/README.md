@@ -231,7 +231,6 @@ A seleção das diferentes bandas é feita utilizando uma rede divisora de tens�
 - A banda **FM1** é uma banda fixa.  
 - As outras bandas podem ter seus pontos de frequência inicial e final personalizados através do **MTP**.  
 
-Aqui está a tradução da tabela de definição de bandas do BK1198 em formato Markdown:
 
 ```markdown
 # Definição de Bandas - BK1198
@@ -262,8 +261,6 @@ Aqui está a tradução da tabela de definição de bandas do BK1198 em formato 
 - A banda FM1 é fixa.  
 - As demais bandas podem ser configuradas por meio do MTP (Multi-Time Programmable) para ajustar a frequência inicial e final dentro dos limites especificados no datasheet.
 ``` 
-
-Se precisar de mais alguma seção traduzida ou formatada em Markdown, é só avisar!
 
 
 **Observação:** A faixa de frequência personalizada não pode ultrapassar os limites mínimos e máximos definidos no datasheet.

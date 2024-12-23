@@ -5,77 +5,63 @@ Endereço I2C = 0x80
 
 Registradores:
 
-| Reg(Dec)  | Reg(Hex)  | Description | Value(HEX) |
-| --------- | --------  | ----------- | ---------  |
-|  0        | 00        | DeviceID    |      1320  |
-|  1        | 01        | ChipID      |      1080  |
-|  2        | 02        | PowerCfg    |      0281  |
-|  3        | 03        | Channel     |      0000  |
-|  4        | 04        | SysConf1    |      D823  |
-|  5        | 05        | SysConf2    |      001F  |
-|  6        | 06        | SysConf3    |      280E  |
-|  7        | 07        | SysConf4    |      4101  |
-|  8        | 08        | SysConf5    |      8C90  |
-|  9        | 09        | StatusSNR   |      0000  |  
-| 10        | 0A        | StatusRSSI  |      0000  |
-| 11        | 0B        | ReadChannel |      0000  |
-| 12        | 0C        | StatusBAND  |      0000  |
-| 13        | 0D        | DigTest1    |      13C1  |
-| 14        | 0E        | DigTest2    |      6DF0  |
-| 15        | 0F        | DigTest3    |      002F  |
-| 16        | 10        | DigTest4    |      1A1C  |
-| 17        | 11        | DigTest5    |      3000  |
-| 18        | 12        | DigTest6    |      1000  |
-| 19        | 13        | DigTest7    |      23A5  |
-| 20        | 14        | DigTest8    |      0000  |
-| 21        | 15        | DigTest9    |      0000  |
-| 22        | 16        | MTP1        |      3A71  |
-| 23        | 17        | MTP2        |      231B  |
-| 24        | 18        | MTP3        |      4A15  |
-| 25        | 19        | MTP4        |      431A  |
-| 26        | 1A        | MTP5        |      4A15  |
-| 27        | 1B        | MTP6        |      7F6A  |
-| 28        | 1C        | FM2_FREQ1   |      02F8  |
-| 29        | 1D        | FM2_FREQ2   |      0398  |
-| 30        | 1E        | FM3_FREQ1   |      0280  |
-| 31        | 1F        | FM3_FREQ2   |      0366  |
-| 32        | 20        | MW1_FREQ1   |      0034  |
-| 27        | 1B        | MW1_FREQ2   |      00AB  |
-| 34        | 22        | MW2_FREQ1   |      003A  |
-| 35        | 23        | MW2_FREQ2   |      00B4  |
-| 36        | 24        | MW3_FREQ1   |      01F8  |
-| 37        | 25        | MW3_FREQ2   |      06AE  |
-| 38        | 26        | SW1_FREQ1   |      0163  |
-| 39        | 27        | SW1_FREQ2   |      01CF  |
-| 40        | 28        | SW2_FREQ1   |      01AB  |
-| 35        | 23        | SW2_FREQ2   |      023D  |
-| 42        | 2A        | SW3_FREQ1   |      0218  |
-| 43        | 2B        | SW3_FREQ2   |      027D  |
-| 44        | 2C        | SW4_FREQ1   |      027D  |
-| 45        | 2D        | SW4_FREQ2   |      0302  |
-| 46        | 2E        | SW5_FREQ1   |      039E  |
-| 47        | 2F        | SW5_FREQ2   |      0435  |
-| 48        | 30        | SW6_FREQ1   |      0405  |
-| 49        | 31        | SW6_FREQ2   |      04BE  |
-| 50        | 32        | SW7_FREQ1   |      04EF  |
-| 51        | 33        | SW7_FREQ2   |      05A8  |
-| 52        | 34        | SW8_FREQ1   |      05B6  |
-| 53        | 35        | SW8_FREQ2   |      0666  |
-| 54        | 36        | SW9_FREQ1   |      06A2  |
-| 55        | 37        | SW9_FREQ2   |      0757  |
-| 56        | 38        | SW10_FREQ1  |      07E3  |
-| 57        | 39        | SW10_FREQ2  |      08A7  |  
-| 58        | 3A        | SW11_FREQ1  |      0257  |
-| 59        | 3B        | SW11_FREQ2  |      0708  |
-| 60        | 3C        | SW12_FREQ1  |      031F  |
-| 61        | 3D        | SW12_FREQ2  |      0708  |
-| 62        | 3E        | Analog0     |      4CA2  |
-| 63        | 3F        | Analog1     |      8E20  |
-| 64        | 40        | Analog2     |      0200  |
-| 65        | 41        | Analog3     |      0000  |
-| 66        | 42        | FM Analog4  |      A8E4  |  
-| 67        | 43        | Analog5     |      3264  |
-| 66        | 42        | AM Analog6  |      A8E4  |
+
+
+| Register  | Register2 | Description | Value(HEX) | Value(DEC) |  NOTE                         |          
+| --------- | --------- | ----------- | ---------  | ---------- | ----------------------------- |
+| 0         | 00        | DeviceID    | 1320       | 4896       |                               |
+| 1         | 01        | ChipID      | 1080       | 4224       |                               |
+| 2         | 02        | PowerCfg    | 0281       | 641        |                               |
+| 3         | 03        | Channel     | 0000       | 0          |                               |
+| 4         | 04        | SysConf1    | D823       | 55331      |                               |
+| 5         | 05        | SysConf2    | 001F       | 31         |                               |
+| 6         | 06        | SysConf3    | 280E       | 10254      |                               |
+| 7         | 07        | SysConf4    | 4101       | 16641      |                               |
+| 8         | 08        | SysConf5    | 8C90       | 35984      |                               |
+| 9         | 09        | StatusSNR   | 0000       | 0          |                               |
+| 10        | 0A        | StatusRSSI  | 0000       | 0          |                               |
+| 11        | 0B        | ReadChannel | 0000       | 0          |                               |
+| 12        | 0C        | StatusBAND  | 0000       | 0          |                               |
+| 13        | 0D        | DigTest1    | 13C1       | 5057       |                               |
+| 14        | 0E        | DigTest2    | 6DF0       | 28144      |                               |
+| 15        | 0F        | DigTest3    | 002F       | 47         |                               |
+| 16        | 10        | DigTest4    | 1A1C       | 6684       |                               |
+| 17        | 11        | DigTest5    | 3000       | 12288      |                               |
+| 18        | 12        | DigTest6    | 1000       | 4096       |                               |
+| 19        | 13        | DigTest7    | 23A5       | 9125       |                               |
+| 20        | 14        | DigTest8    | 0000       | 0          |                               |
+| 21        | 15        | DigTest9    | 0000       | 0          |                               |
+| 22        | 16        | MTP1        | 3A71       | 14961      |                               |
+| 23        | 17        | MTP2        | 231B       | 8987       |                               |
+| 24        | 18        | MTP3        | 4A15       | 18965      |                               |
+| 25        | 19        | MTP4        | 431A       | 17178      |                               |
+| 26        | 1A        | MTP5        | 4A15       | 18965      |                               |
+| 27        | 1B        | MTP6        | 7F6A       | 32618      |                               |
+| 28        | 1C        | FM2_FREQ1   | 02F8       | 760        |  Start - 76MHz                |
+| 29        | 1D        | FM2_FREQ2   | 0398       | 920        |  Stop  - 92MHz                |
+| 30        | 1E        | FM3_FREQ1   | 0280       | 640        |  Start - 64MHz                |
+| 31        | 1F        | FM3_FREQ2   | 0366       | 870        |  Stop  - 87MHz                |
+| 32        | 20        | MW1_FREQ1   | 0034       | 52         |  Start - 520kHz               |
+| 27        | 1B        | MW1_FREQ2   | 00AB       | 171        |  Stop  - 1710kHz              |
+| 34        | 22        | MW2_FREQ1   | 003A       | 58         |  Start - 580kHz   *           |
+| 35        | 23        | MW2_FREQ2   | 00B4       | 180        |  Stop  - 1800kHz  *           |
+| 36        | 24        | MW3_FREQ1   | 0034       | 52         |  Start - 520kHz   *           |
+| 37        | 25        | MW3_FREQ2   | 00AB       | 1710       |  Stop  - 1710kHz  *           |
+| 38        | 26        | SW1_FREQ1   | 0163       | 355        |  Start - 3500kHz              |
+| 39        | 27        | SW1_FREQ2   | 01CF       | 463        |  Stop  - 4630kHz              |
+| 40        | 28        | SW2_FREQ1   | 01AB       | 427        |  Start - 4270kHz              |
+| 35        | 23        | SW2_FREQ2   | 023D       | 569        |  Stop  - 5690kHz              |
+| 42        | 2A        | SW3_FREQ1   | 0218       | 536        |  Start - 5360kHz              |
+| 43        | 2B        | SW3_FREQ2   | 027D       | 637        |  Stop  - 6370kHz              |
+| 44        | 2C        | SW4_FREQ1   | 027D       | 637        |  Start - 6370kHz              |
+| 45        | 2D        | SW4_FREQ2   | 0302       | 770        |  Stop  - 7700kHz              |
+| 46        | 2E        | SW5_FREQ1   | 039E       | 926        |                               |
+| 47        | 2F        | SW5_FREQ2   | 0435       | 1077       |                               |
+| 48        | 30        | SW6_FREQ1   | 0405       | 1029       |                               |
+| 49        | 31        | SW6_FREQ2   | 04BE       | 1214       |                               |
+| 50        | 32        | SW7_FREQ1   | 04EF       | 1263       |                               |
+| 51        | 33        | SW7_FREQ2   | 05A8       | 1448       |                               |
+
 
 
 ## 1.2 Circuito Ressonante na Entrada de Antena FM

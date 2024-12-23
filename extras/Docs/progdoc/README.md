@@ -8,18 +8,18 @@ Registradores:
 As of now, despite the extensive documentation provided by BEKEN (for which I am grateful), the organization of registers 00 to 0x16 remains unclear. Some documents suggest that these registers may share the same structure as those in the BK1080/88. Therefore, to begin this project, I will assume that registers 00 to 0x15 on the BK1198 are equivalent to those on the BK1080/88. As I delve deeper into the BK1198 documentation, I will make any necessary adjustments.
 
 
-| Register  | Register2 | Description | Value(HEX) | Value(DEC) |  NOTE                         |          
+| Reg (Dec) | Reg (Hex) | Description | Value(HEX) | Value(DEC) |  NOTE                         |          
 | --------- | --------- | ----------- | ---------  | ---------- | ----------------------------- |
-| 0         | 00        | DeviceID    | 1320       | 4896       |                               |
-| 1         | 01        | ChipID      | 1080       | 4224       |                               |
-| 2         | 02        | PowerCfg    | 0281       | 641        |                               |
-| 3         | 03        | Channel     | 0000       | 0          |                               |
-| 4         | 04        | SysConf1    | D823       | 55331      |                               |
-| 5         | 05        | SysConf2    | 001F       | 31         |                               |
-| 6         | 06        | SysConf3    | 280E       | 10254      |                               |
-| 7         | 07        | SysConf4    | 4101       | 16641      |                               |
-| 8         | 08        | SysConf5    | 8C90       | 35984      |                               |
-| 9         | 09        | StatusSNR   | 0000       | 0          |                               |
+|  0        | 00        | DeviceID    | 1320       | 4896       |                               |
+|  1        | 01        | ChipID      | 1080       | 4224       |                               |
+|  2        | 02        | PowerCfg    | 0281       | 641        |                               |
+|  3        | 03        | Channel     | 0000       | 0          |                               |
+|  4        | 04        | SysConf1    | D823       | 55331      |                               |
+|  5        | 05        | SysConf2    | 001F       | 31         |                               |
+|  6        | 06        | SysConf3    | 280E       | 10254      |                               |
+|  7        | 07        | SysConf4    | 4101       | 16641      |                               |
+|  8        | 08        | SysConf5    | 8C90       | 35984      |                               |
+|  9        | 09        | StatusSNR   | 0000       | 0          |                               |
 | 10        | 0A        | StatusRSSI  | 0000       | 0          |                               |
 | 11        | 0B        | ReadChannel | 0000       | 0          |                               |
 | 12        | 0C        | StatusBAND  | 0000       | 0          |                               |

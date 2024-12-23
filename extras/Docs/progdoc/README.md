@@ -5,77 +5,77 @@ Endereço I2C = 0x80
 
 Registradores:
 
-REG0(DeviceID),0000000000001320
-REG1(ChipID),0000000000001080
-REG2(PowerCfg),0000000000000281
-REG3(Channel),0000000000000000
-REG4(SysConf1),000000000000D823
-REG5(SysConf2),000000000000001F
-REG6(SysConf3),000000000000280E
-REG7(SysConf4),0000000000004101
-REG8(SysConf5),0000000000008C90
-REG9(StatusSNR),0000000000000000
-REG10(StatusRSSI),0000000000000000
-REG11(ReadChannel),0000000000000000
-REG12(StatusBAND),0000000000000000
-REG13(DigTest1),00000000000013C1
-REG14(DigTest2),0000000000006DF0
-REG15(DigTest3),000000000000002F
-REG16(DigTest4),0000000000001A1C
-REG17(DigTest5),0000000000003000
-REG18(DigTest6),0000000000001000
-REG19(DigTest7),00000000000023A5
-REG20(DigTest8),0000000000000000
-REG21(DigTest9),0000000000000000
-REG22(MTP1),0000000000003A71
-REG23(MTP2),000000000000231B
-REG24(MTP3),0000000000004A15
-REG25(MTP4),000000000000431A
-REG26(MTP5),0000000000004A15
-REG27(MTP6),0000000000007F6A
-REG28(FM2_FREQ1),00000000000002F8
-REG29(FM2_FREQ2),0000000000000398
-REG30(FM3_FREQ1),0000000000000280
-REG31(FM3_FREQ2),0000000000000366
-REG32(MW1_FREQ1),0000000000000034
-REG27(MW1_FREQ2),00000000000000AB
-REG34(MW2_FREQ1),000000000000003A
-REG35(MW2_FREQ2),00000000000000B4
-REG36(MW3_FREQ1),00000000000001F8
-REG37(MW3_FREQ2),00000000000006AE
-REG38(SW1_FREQ1),0000000000000163
-REG39(SW1_FREQ2),00000000000001CF
-REG40(SW2_FREQ1),00000000000001AB
-REG35(SW2_FREQ2),000000000000023D
-REG42(SW3_FREQ1),0000000000000218
-REG43(SW3_FREQ2),000000000000027D
-REG44(SW4_FREQ1),000000000000027D
-REG45(SW4_FREQ2),0000000000000302
-REG46(SW5_FREQ1),000000000000039E
-REG47(SW5_FREQ2),0000000000000435
-REG48(SW6_FREQ1),0000000000000405
-REG49(SW6_FREQ2),00000000000004BE
-REG50(SW7_FREQ1),00000000000004EF
-REG51(SW7_FREQ2),00000000000005A8
-REG52(SW8_FREQ1),00000000000005B6
-REG53(SW8_FREQ2),0000000000000666
-REG54(SW9_FREQ1),00000000000006A2
-REG55(SW9_FREQ2),0000000000000757
-REG56(SW10_FREQ1),00000000000007E3
-REG57(SW10_FREQ2),00000000000008A7
-REG58(SW11_FREQ1),0000000000000257
-REG59(SW11_FREQ2),0000000000000708
-REG60(SW12_FREQ1),000000000000031F
-REG61(SW12_FREQ2),0000000000000708
-REG62(Analog0),0000000000004CA2
-REG63(Analog1),0000000000008E20
-REG64(Analog2),0000000000000200
-REG65(Analog3),0000000000000000
-REG66(FM Analog4),000000000000A8E4
-REG67(Analog5),0000000000003264
-REG66(AM Analog6),000000000000A8E4
-
-
+| Reg(Dec)  | Reg(Hex)  | Description | Value(HEX) |
+| --------- | --------  | ----------- | ---------  |
+|  0        | 00        | DeviceID    |      1320  |
+|  1        | 01        | ChipID      |      1080  |
+|  2        | 02        | PowerCfg    |      0281  |
+|  3        | 03        | Channel     |      0000  |
+|  4        | 04        | SysConf1    |      D823  |
+|  5        | 05        | SysConf2    |      001F  |
+|  6        | 06        | SysConf3    |      280E  |
+|  7        | 07        | SysConf4    |      4101  |
+|  8        | 08        | SysConf5    |      8C90  |
+|  9        | 09        | StatusSNR   |      0000  |  
+| 10        | 0A        | StatusRSSI  |      0000  |
+| 11        | 0B        | ReadChannel |      0000  |
+| 12        | 0C        | StatusBAND  |      0000  |
+| 13        | 0D        | DigTest1    |      13C1  |
+| 14        | 0E        | DigTest2    |      6DF0  |
+| 15        | 0F        | DigTest3    |      002F  |
+| 16        | 10        | DigTest4    |      1A1C  |
+| 17        | 11        | DigTest5    |      3000  |
+| 18        | 12        | DigTest6    |      1000  |
+| 19        | 13        | DigTest7    |      23A5  |
+| 20        | 14        | DigTest8    |      0000  |
+| 21        | 15        | DigTest9    |      0000  |
+| 22        | 16        | MTP1        |      3A71  |
+| 23        | 17        | MTP2        |      231B  |
+| 24        | 18        | MTP3        |      4A15  |
+| 25        | 19        | MTP4        |      431A  |
+| 26        | 1A        | MTP5        |      4A15  |
+| 27        | 1B        | MTP6        |      7F6A  |
+| 28        | 1C        | FM2_FREQ1   |      02F8  |
+| 29        | 1D        | FM2_FREQ2   |      0398  |
+| 30        | 1E        | FM3_FREQ1   |      0280  |
+| 31        | 1F        | FM3_FREQ2   |      0366  |
+| 32        | 20        | MW1_FREQ1   |      0034  |
+| 27        | 1B        | MW1_FREQ2   |      00AB  |
+| 34        | 22        | MW2_FREQ1   |      003A  |
+| 35        | 23        | MW2_FREQ2   |      00B4  |
+| 36        | 24        | MW3_FREQ1   |      01F8  |
+| 37        | 25        | MW3_FREQ2   |      06AE  |
+| 38        | 26        | SW1_FREQ1   |      0163  |
+| 39        | 27        | SW1_FREQ2   |      01CF  |
+| 40        | 28        | SW2_FREQ1   |      01AB  |
+| 35        | 23        | SW2_FREQ2   |      023D  |
+| 42        | 2A        | SW3_FREQ1   |      0218  |
+| 43        | 2B        | SW3_FREQ2   |      027D  |
+| 44        | 2C        | SW4_FREQ1   |      027D  |
+| 45        | 2D        | SW4_FREQ2   |      0302  |
+| 46        | 2E        | SW5_FREQ1   |      039E  |
+| 47        | 2F        | SW5_FREQ2   |      0435  |
+| 48        | 30        | SW6_FREQ1   |      0405  |
+| 49        | 31        | SW6_FREQ2   |      04BE  |
+| 50        | 32        | SW7_FREQ1   |      04EF  |
+| 51        | 33        | SW7_FREQ2   |      05A8  |
+| 52        | 34        | SW8_FREQ1   |      05B6  |
+| 53        | 35        | SW8_FREQ2   |      0666  |
+| 54        | 36        | SW9_FREQ1   |      06A2  |
+| 55        | 37        | SW9_FREQ2   |      0757  |
+| 56        | 38        | SW10_FREQ1  |      07E3  |
+| 57        | 39        | SW10_FREQ2  |      08A7  |  
+| 58        | 3A        | SW11_FREQ1  |      0257  |
+| 59        | 3B        | SW11_FREQ2  |      0708  |
+| 60        | 3C        | SW12_FREQ1  |      031F  |
+| 61        | 3D        | SW12_FREQ2  |      0708  |
+| 62        | 3E        | Analog0     |      4CA2  |
+| 63        | 3F        | Analog1     |      8E20  |
+| 64        | 40        | Analog2     |      0200  |
+| 65        | 41        | Analog3     |      0000  |
+| 66        | 42        | FM Analog4  |      A8E4  |  
+| 67        | 43        | Analog5     |      3264  |
+| 66        | 42        | AM Analog6  |      A8E4  |
 
 
 ## 1.2 Circuito Ressonante na Entrada de Antena FM

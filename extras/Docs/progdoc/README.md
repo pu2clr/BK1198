@@ -8,6 +8,10 @@ Registradores:
 As of now, despite the extensive documentation provided by BEKEN (for which I am grateful), the organization of registers 00 to 0x16 remains unclear. Some documents suggest that these registers may share the same structure as those in the BK1080/88. Therefore, to begin this project, I will assume that registers 00 to 0x15 on the BK1198 are equivalent to those on the BK1080/88. As I delve deeper into the BK1198 documentation, I will make any necessary adjustments.
 
 
+Até o momento, apesar da extensa documentação fornecida pela própria BEKEN (à qual agradeço pela atenção), ainda não há clareza sobre a organização dos registradores de 00 a 0x16. Alguns documentos indicam que esses registradores podem ter a mesma estrutura dos presentes no BK1080/88. Diante disso, para dar início a este projeto, assumirei que os registradores entre 00 e 0x15 do BK1198 são equivalentes aos do BK1080/88. Conforme eu me aprofundar na documentação do BK1198, farei os ajustes necessários.
+
+
+
 | Reg (Dec) | Reg (Hex) | Description | Value(HEX) | Value(DEC) |  NOTE                         |          
 | --------- | --------- | ----------- | ---------  | ---------- | ----------------------------- |
 |  0        | 00        | DeviceID    | 1320       | 4896       |                               |

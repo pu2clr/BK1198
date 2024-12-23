@@ -75,7 +75,10 @@ REG66(FM Analog4),000000000000A8E4
 REG67(Analog5),0000000000003264
 REG66(AM Analog6),000000000000A8E4
 
-1.2 Circuito Ressonante na Entrada de Antena FM
+
+
+
+## 1.2 Circuito Ressonante na Entrada de Antena FM
 
 Pino Relacionado: FMI
 
@@ -88,7 +91,7 @@ No entanto, na prática, há uma capacitância parasita de aproximadamente 6 pF 
 Em resumo, ao utilizar um indutor externo de 100 nH, o valor do capacitor deve ser ajustado conforme as condições reais de uso para otimização do desempenho.
 
 
-**1.3 Circuito LNA Externo de Ondas Curtas e Circuito AM**  
+## 1.3 Circuito LNA Externo de Ondas Curtas e Circuito AM  
 
 **Pinos Relacionados:** RFGND, AMI, LNA_EN  
 
@@ -105,7 +108,7 @@ Ao alternar para o modo de ondas curtas (**SW**), o pino **LNA_EN** emite um sin
 Para recepção de **AM**, geralmente utiliza-se uma **antena de bastão de ferrite**. Recomenda-se usar um bastão maior, dentro dos limites do tamanho do dispositivo. A antena deve ser mantida afastada do chip **BK1198**, de outros circuitos e de objetos metálicos para minimizar interferências.
 
 
-**1.4 Seleção de Modo: Fonte dos Registradores e Circuito de Interface I2C/IRQ**  
+## 1.4 Seleção de Modo: Fonte dos Registradores e Circuito de Interface I2C/IRQ
 
 **Pinos Relacionados:** MODE, SCLK, SDIO, IRQ/BAND_IND1  
 
@@ -131,7 +134,7 @@ O pino **IRQ/IND1** funciona como um pino de solicitação de interrupção. Pri
 Quando operando como um pino de interrupção, ele gera uma transição de **borda de descida** (falling edge) para o MCU ao concluir a definição de uma frequência. O MCU então lê o valor da frequência atual através do I2C.
 
 
-**1.5 Circuito de Alimentação e Chave de Liga/Desliga (PWD)**  
+## 1.5 Circuito de Alimentação e Chave de Liga/Desliga (PWD) 
 
 **Pino Relacionado:** PWD  
 
@@ -143,7 +146,7 @@ O BK1198 possui três modos de alimentação e chaveamento para ligar e desligar
 Esses três modos não requerem nenhuma configuração nos registradores internos. A seleção do modo é feita apenas por modificações no circuito externo.
 
 
-**1.5.1 Modo de Ligação Direta (Power-On ao Energizar)**  
+### 1.5.1 Modo de Ligação Direta (Power-On ao Energizar) 
 
 Nesse modo, um interruptor externo é utilizado para controlar diretamente a tensão de alimentação do **BK1198**.  
 
@@ -151,7 +154,7 @@ Nesse modo, um interruptor externo é utilizado para controlar diretamente a ten
 - O pino **PWD** precisa apenas ser conectado a um circuito de atraso **RC** (resistor-capacitor).
 
 
-**1.5.2 Modo de Chave Única**  
+### 1.5.2 Modo de Chave Única  
 
 O modo de chave única permite controlar o chip alternando entre o modo de espera (standby) e o modo de operação normal através de um botão externo.  
 
@@ -161,7 +164,7 @@ O modo de chave única permite controlar o chip alternando entre o modo de esper
 - Pressionando o botão repetidamente, o chip alternará continuamente entre os dois modos.
 
 
-**1.5.3 Modo de Chave Dupla**  
+### 1.5.3 Modo de Chave Dupla 
 
 O modo de chave dupla permite controlar o estado de operação do chip usando dois botões externos.  
 
@@ -171,7 +174,7 @@ O modo de chave dupla permite controlar o estado de operação do chip usando do
 - Se **S1** for pressionado enquanto o chip já estiver no modo de operação normal, ou **S2** for pressionado enquanto estiver no modo de espera, o sistema **mantém seu estado atual** sem alterações.
 
 
-**1.6 Circuito de Controle de Volume**  
+## 1.6 Circuito de Controle de Volume
 
 **Pino Relacionado:** VOL  
 
@@ -184,7 +187,7 @@ A seleção do modo de controle de volume deve ser configurada nos registradores
 
 ---
 
-**1.6.1 Modo de Controle por Nível**  
+### 1.6.1 Modo de Controle por Nível 
 
 O controle por nível ajusta o volume detectando o nível de tensão no pino de entrada **VOL**.  
 
@@ -194,7 +197,7 @@ O controle por nível ajusta o volume detectando o nível de tensão no pino de 
 
 ---
 
-**1.6.2 Modo de Controle por Chave Dupla (Configuração Padrão)**  
+### 1.6.2 Modo de Controle por Chave Dupla (Configuração Padrão)  
 
 O controle por chave dupla permite ajustar o volume através de dois botões externos:  
 - Um botão é definido como **aumentar volume (VOL+)**.  
@@ -203,7 +206,7 @@ O controle por chave dupla permite ajustar o volume através de dois botões ext
 - Cada vez que o botão **VOL+** é pressionado, o volume aumenta em **2 dB** até atingir o volume máximo.  
 - Cada vez que o botão **VOL-** é pressionado, o volume diminui em **2 dB** até atingir o volume mínimo.
 
-**1.6.3 Modo de Controle por Encoder Rotativo**  
+### 1.6.3 Modo de Controle por Encoder Rotativo 
 
 O controle por encoder funciona gerando dois pulsos defasados através de um circuito de decodificação interno quando o encoder é girado.  
 
@@ -211,12 +214,12 @@ O controle por encoder funciona gerando dois pulsos defasados através de um cir
 - Se a direção de rotação estiver invertida em relação à desejada, basta trocar os valores de **R32** e **R33**.
 
 
-**2. Seleção de Banda e Sintonia de Frequência do BK1198**  
+## 2. Seleção de Banda e Sintonia de Frequência do BK1198  
 
 
 
 
-**2.1 Definição de Bandas do BK1198**  
+### 2.1 Definição de Bandas do BK1198 
 
 O **BK1198** oferece **18 bandas diferentes**, que incluem:  
 - **3 bandas de FM (modulação em frequência)**  
@@ -267,7 +270,7 @@ Se precisar de mais alguma seção traduzida ou formatada em Markdown, é só av
 
 
 
-2.2 Modos de Seleção de Banda e Indicação FM/AM do BK1198
+## 2.2 Modos de Seleção de Banda e Indicação FM/AM do BK1198
 
 Pinos Relacionados: AM/FM, BAND, IRQ/BAND_IND1, BAND_IND2.
 
@@ -279,7 +282,7 @@ Modo de Seleção por Tecla Única e Chave de Banda
 Modo de Seleção por Dupla Tecla e Chave de Banda
 Os quatro modos são configurados através dos registradores REG16H[5:4] e REG22[5:4]. Os valores de configuração podem ser alterados via MTP ou escritos diretamente através do I2C.
 
-2.2.1 Modo de Seleção por Chave de Banda (Configuração Padrão)
+### 2.2.1 Modo de Seleção por Chave de Banda (Configuração Padrão)
 
 Por padrão, o registrador está configurado para exigir apenas a chave de banda.
 
@@ -289,7 +292,7 @@ O valor total do resistor deve ser mantido constante em 360 kΩ (resistor de TUN
 
 
 
-2.2.2 Modo de Seleção por Nível e Chave de Banda
+### 2.2.2 Modo de Seleção por Nível e Chave de Banda
 
 Nesse modo, o chip detecta o nível do pino AM/FM.
 
@@ -297,7 +300,7 @@ Se o nível desse pino for baixo (LOW), o chip sempre entrará em FM1, FM2 ou FM
 Se o nível do pino for alto (HIGH), o chip entrará nas faixas de frequência AM e SW. A faixa específica será determinada pela tensão detectada no pino BAND (a seleção de banda é feita por meio de um seletor deslizante de bandas).
 
 
-2.2.3 Modo de Seleção por Tecla Única e Chave de Banda
+### 2.2.3 Modo de Seleção por Tecla Única e Chave de Banda
 
 Nesse modo, o chip detecta o estado do botão conectado ao pino AM/FM.
 
@@ -305,14 +308,14 @@ Cada vez que o botão é pressionado, o chip alterna entre a banda FM (a seleç�
 A banda de operação é determinada pela tensão detectada no pino BAND (através de um seletor deslizante de bandas).
 
 
-2.2.4 Modo de Seleção por Dupla Tecla e Chave de Banda
+### 2.2.4 Modo de Seleção por Dupla Tecla e Chave de Banda
 
 Nesse modo, o chip detecta o estado dos botões conectados ao pino AM/FM.
 
 Ao pressionar o botão FM (nível baixo), o chip opera na banda 3 (FM3).
 Ao pressionar o botão AM (nível alto), o chip entra nas bandas AM e SW. A banda específica é determinada pela tensão detectada no pino BAND (através de um seletor deslizante de bandas).
 
-2.2.5 Indicação FM/AM
+### 2.2.5 Indicação FM/AM
 
 Os pinos IRQ/BAND_IND1 e BAND_IND2 são utilizados para indicar se o chip está no modo FM ou AM.
 
@@ -324,7 +327,7 @@ Quando BAND_IND1 emite nível alto e BAND_IND2 = 0, o chip está em modo FM.
 Quando BAND_IND1 emite nível alto e BAND_IND2 = 1, o chip está em modo AM.
 Além disso, o pino BAND_IND1 também pode ser utilizado para controlar o sinal de chaveamento de um amplificador de áudio externo, ajudando a eliminar o ruído de "pop" ao ligar o dispositivo.
 
-2.3 Sintonia de Frequência do BK1198
+## 2.3 Sintonia de Frequência do BK1198
 
 Pinos Relacionados: TUNE1, TUNE2.
 
@@ -337,14 +340,14 @@ Esses três modos são configurados através dos registradores REG16H[3:2] e REG
 
 Os valores de configuração podem ser alterados através de MTP ou escritos diretamente via I2C.
 
-2.3.1 Modo PVR (Configuração Padrão)
+### 2.3.1 Modo PVR (Configuração Padrão)
 
 Nesse modo, o pino TUNE2 utiliza um ADC interno para detectar o estado de ajuste do PVR.
 
 A frequência de operação atual é calculada e escrita com base nos valores ajustados.
 
 
-2.3.2 Modo de Sintonia por Encoder Rotativo
+### 2.3.2 Modo de Sintonia por Encoder Rotativo
 
 O princípio de funcionamento do encoder é semelhante ao de um encoder de controle de volume.
 
@@ -356,7 +359,7 @@ Para melhorar a experiência de uso em bandas com muitas frequências, é implem
 
 Quando a velocidade de rotação excede um determinado limite, a frequência muda em incrementos de 5 a cada giro.
 
-2.3.3 Modo de Escrita de Frequência via I2C
+### 2.3.3 Modo de Escrita de Frequência via I2C
 
 Nesse modo, o chip não responde mais à seleção de banda por chave.
 
@@ -365,7 +368,7 @@ A frequência de operação é totalmente controlada por um dispositivo externo 
 
 
 
-**3 Gravação de MTP**  
+## 3 Gravação de MTP  
 
 Para realizar a gravação do **MTP**, o hardware deve conectar o **MCU externo** à interface **I2C** do **BK1198** através dos pinos **SCLK** e **SDIO** (com resistores de pull-up). O pino **MODE** deve habilitar o I2C (conectado a **0,375 \* VCC** ou **0,625 \* VCC**). Com a alimentação e o circuito do cristal, a gravação do **MTP** pode ser realizada.  
 
@@ -377,7 +380,7 @@ Para detalhes do código-fonte da gravação de **MTP**, consulte o diretório *
 
 ---
 
-### **3.1 Diagrama de Gravação de MTP**  
+## 3.1 Diagrama de Gravação de MTP 
 
 No hardware de gravação de **MTP**, a interface **I2C** do **MCU externo** conecta-se ao **BK1198** nos seguintes pinos:  
 - **PIN9 = SCLK**  
@@ -394,15 +397,15 @@ O pino **P0.7** conecta-se a um LED vermelho. Quando o nível lógico está **ba
 O programa gravado na **Flash** do **MCU** é o **BK1198_Tool_FW_*.omf**. Por padrão, essa **Flash** já vem gravada. Caso precise regravá-la, consulte a documentação do **Silicon Labs C8051F320**.
 
 
-4. Controle do BK1198 por MCU
+## 4. Controle do BK1198 por MCU
 
-4.1 Diagrama de Controle do BK1198 por MCU
-
-
+## 4.1 Diagrama de Controle do BK1198 por MCU
 
 
 
-**4.2 Ajuste Manual e Exibição Numérica no MCU**
+
+
+## 4.2 Ajuste Manual e Exibição Numérica no MCU
 
 O pino **IRQ/IND1** é o pino de solicitação de interrupção. Primeiramente, é necessário verificar a configuração do registrador interno do BK1198, garantindo que a função do pino **IRQ/IND1** esteja configurada como saída de interrupção (**REG17H<15>=0**). (Por padrão, este pino está configurado como saída de interrupção).
 
@@ -420,11 +423,7 @@ A relação entre Banda, Canal e Frequência (ponto de frequência de operação
 3. A frequência de operação calculada com base na fórmula acima representa a frequência de operação definida pelo **PVR** e não considera o desvio de frequência causado pelo **AFC**.
 
 
-Aqui está a tradução do texto solicitado:  
-
----
-
-**4.3 Sintonização Automática com o MCU**  
+## 4.3 Sintonização Automática com o MCU  
 
 Ao realizar a sintonização automática com o MCU, o programa do MCU deve primeiro alterar o valor de **CHAN_MODE[1:0]** no registrador **REG22** de **0** para **2** (alterando o controle de **PVR** para controle via **I2C**).  
 
@@ -439,7 +438,7 @@ A cada vez que o valor de **CHAN_I2C[14:0]** for alterado, é necessário modifi
 Se for uma estação válida, o MCU armazena a frequência correspondente na memória e, em seguida, continua alterando a frequência até que o processo de escaneamento atinja o ponto final definido.  
 
 
-5. Considerações para Layout de PCB
+## 5. Considerações para Layout de PCB
 
 Maximize a área de aterramento. As entradas FMI e AMI devem manter o plano de terra limpo. Os indutores e capacitores do circuito ressonante na entrada FM devem ser colocados o mais próximo possível do pino de entrada FMI do chip.
 Os capacitores de desacoplamento da fonte de alimentação devem ser posicionados o mais próximo possível do chip.

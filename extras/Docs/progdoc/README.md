@@ -232,11 +232,10 @@ A seleção das diferentes bandas é feita utilizando uma rede divisora de tens�
 - As outras bandas podem ter seus pontos de frequência inicial e final personalizados através do **MTP**.  
 
 
-```markdown
 # Definição de Bandas - BK1198
 
 | No BAND | Banda Name | Faixa de Frequência | Espaçamento de Canais |  Resistência | 
-| ------- |------------|---------------------|-----------------------| -------------|
+| ------- | ---------- | ------------------- | --------------------- | ------------ |
 |  1      | FM1        | 87 - 108 MHz        | 100 kHz               |  10          | 
 |  2      | FM2        | 87 - 108,5 MHz      | 100 kHz               |  30          |
 |  3      | FM3        | 64 - 108 MHz        | 50 kHz                |  50          |
@@ -260,7 +259,7 @@ A seleção das diferentes bandas é feita utilizando uma rede divisora de tens�
 **Observação:**
 - A banda FM1 é fixa.  
 - As demais bandas podem ser configuradas por meio do MTP (Multi-Time Programmable) para ajustar a frequência inicial e final dentro dos limites especificados no datasheet.
-``` 
+
 
 
 **Observação:** A faixa de frequência personalizada não pode ultrapassar os limites mínimos e máximos definidos no datasheet.

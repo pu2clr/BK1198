@@ -43,12 +43,15 @@ O próximo passo é **desabilitar o banco de resistores** que compõe o divisor 
 
 **Observação:** *Na realidade o que deve ser isolado são os resistores originais do divisor de tensão dos pinos 1 e 15 do BK1198. A remoção dos resistores originais ou somente de um deles (já que se trata de uma rede em série) pode resolver. Fazendo assim, não há necessidade de danificar a placa como sugerido anteriormente.* 
 
+![Identificação dos Pinos na Placa](../../Images/Modification/RX_01/M13.jpg)
+
 
 ### 5. Remoção da Chave de Onda Original  
 
 Se o rádio possuir uma chave de onda (switch AM/FM), considere **removê-la**. A substituição por uma chave personalizada permitirá a inclusão da faixa de Ondas Curtas.  
 
 **Observação:** *Se você removeu os resistores originais de seleção de banda da placa do rádio e não cortou as trilhas, é possível simplesmente soldar os três fios da nova chave de banda no lugar da chave original. Esta abordagem deixará o trabalho mais limpo e com danos mínimos na placa do circuito.*
+
 
 
 ### 6. Montagem da Nova Chave de Onda  

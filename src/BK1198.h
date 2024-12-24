@@ -721,6 +721,14 @@ typedef union
     uint16_t raw;
 } word16_to_bytes;
 
+/** 
+   Band parameters 
+*/
+typedef struct {
+    uint16_t bandBotton;
+    uint16_t bandTop;
+    uint8_t  bandSpace;   
+} BandSelect;
 
 
 /**
@@ -772,6 +780,18 @@ private:
     bk_reg1D *reg1d = (bk_reg1D *)&shadowRegisters[REG1D]; // 29
     bk_reg1E *reg1e = (bk_reg1E *)&shadowRegisters[REG1E]; // 30
     bk_reg1F *reg1f = (bk_reg1F *)&shadowRegisters[REG1F]; // 31
+
+    /*
+    TODO
+    BandSelect bandSelect[] = { {8700,10800,100},
+                                {7600, 9200,100},
+                                {6000,11200, 50}, 
+                                { 520, 1710, 10},
+                                { 522, 1620,  9},
+                                { 504, 1665,  1},
+                                {5600, 6400,  5},
+                                  }; 
+                                  */
 
     uint16_t fmStartBand[4] = {6400, 7400, 7600, 8700};  //!< Start FM band limit
     uint16_t fmEndBand[4] = {10800, 7600, 9100, 10800};  //!< End FM band limit

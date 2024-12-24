@@ -725,8 +725,8 @@ typedef union
 
 /**
  * @ingroup GA01  
- * @brief KT0915 Class 
- * @details This class implements all functions that will help you to control the KT0915 devices. 
+ * @brief BK1198 Class 
+ * @details This class implements all functions that will help you to control the BK1198 devices. 
  * 
  * @author PU2CLR - Ricardo Lima Caratti 
  */

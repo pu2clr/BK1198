@@ -16,21 +16,39 @@ Antes de colocar a mão na massa, busque o máximo de conhecimento possível sob
 **IMPORTANTE:**  
 *Alguns receptores podem ter o código do CI raspado, dificultando sua identificação direta. Nesses casos, será necessário analisar o circuito para confirmar se o dispositivo utilizado é realmente o **BK1198**. O datasheet do BK1198 pode ser uma ferramenta valiosa para auxiliar nesse processo de identificação.*
 
-### 3. Localizando os Pinos-Chave  
+#### Identificação do CI pela conexão dos pinos
 
-Após desmontar o rádio, é necessário localizar **o pino 1 e o pino 15 do BK1198** na placa do dispositivo. Esses pinos serão fundamentais para o processo de modificação, pois são responsáveis pela seleção das bandas de frequência.  
+Para verificar se o CI é realmente o BK1198, localize os pinos 1, 15 e 16 do CI no circuito.  
+
+- Os pinos **1 e 16** (**TUNE1 e TUNE2**) são responsáveis pela sintonia e geralmente estão conectados a um potenciômetro de **100K**.  
+
+- O pino **15** (**BAND**) atua como seletor de banda e, normalmente, está ligado a uma chave de ondas (no caso de receptores AM/FM, uma chave de duas posições). 
+
+- O pino **1** (**TUNE1**) compartilha a ligação tanto com a chave de onda como com o potenciômetro de sintonia. 
+
+***Se esses pinos não estiverem conectados conforme descrito anteriormente, é provável que o CI não seja o BK1198.***
+
+### 3. Localizando os pinos de Banda
+
+Após desmontar o rádio siga no circuito os pinos **1** e  **15** do BK1198 na placa do dispositivo. Esses pinos serão fundamentais para o processo de modificação, pois são responsáveis pela seleção das bandas de frequência.  
 
 ### 4. Desabilitação do Banco de Resistores  
+
 O próximo passo é **desabilitar o banco de resistores** que compõe o divisor de tensão responsável pela seleção original de bandas (AM/FM). Esse circuito impede que novas bandas, como Ondas Curtas, sejam sintonizadas.  
 
 ![Nova Chave de Onda](./../../Images/Modification/RX_01/ZFINAL04.jpg)
 
-Observe na figura anterior que as trilhas da placa  do banco de resistores foram cortadas. 
+***Observe na figura anterior que as trilhas da placa do banco de resistores foram cortadas. Após uma análise mais detalhada, concluí que a melhor abordagem é remover os resistores originais de seleção de banda, eliminando a necessidade de cortar as trilhas. Dessa forma, os três fios da nova chave de ondas podem ser soldados diretamente no local da chave original, de forma simples e prática.***
+
+
+**Observação:** *Na realidade o que deve ser isolado são os resistores originais do divisor de tensão dos pinos 1 e 15 do BK1198. A remoção dos resistores originais ou somente de um deles (já que se trata de uma rede em série) pode resolver. Fazendo assim, não há necessidade de danificar a placa como sugerido anteriormente.* 
 
 
 ### 5. Remoção da Chave de Onda Original  
 
 Se o rádio possuir uma chave de onda (switch AM/FM), considere **removê-la**. A substituição por uma chave personalizada permitirá a inclusão da faixa de Ondas Curtas.  
+
+**Observação:** *Se você removeu os resistores originais de seleção de banda da placa do rádio e não cortou as trilhas, é possível simplesmente soldar os três fios da nova chave de banda no lugar da chave original. Esta abordagem deixará o trabalho mais limpo e com danos mínimos na placa do circuito.*
 
 
 ### 6. Montagem da Nova Chave de Onda  

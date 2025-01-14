@@ -1,0 +1,13 @@
+| Band Name  | Band Frequency Range       | Channel Space | AR(K) | Note               |
+| ---------- | -------------------------- | --------------| ----- | ------------------ |
+| FM3        | 87–108 MHz (75 µs)         |               |  67   |                    |
+| AM4        | 522-1728 kHz/520-1730 kHz  |      9k / 10k | 257   |                    |
+| SW3-Narrow | 3.90–4.00 MHz              |      5k       |       | Pin 1 **floating** |
+| SW4-Narrow | 4.75–5.06 MHz              |      5k       |       | Pin 1 **floating** |
+| SW9-Narrow | 9.2–10 MHz                 |      5k       |       | Pin 1 **floating** |
+| SW10-Narrow| 11.45–12.25 MHz            |      5k       |       | Pin 1 **floating** |
+| SW12-Narrow| 13.4–14.2 MHz              |      5k       |       | Pin 1 **floating** |
+| SW14-Narrow| 15 –15.9 MHz               |      5k       |       | Pin 1 **floating** |
+| SW15-Narrow| 17.1 –18 MHz               |      5k       |       | Pin 1 **floating** |
+| SW17-Narrow| 21.2–22 MHz                |      5k       |       | Pin 1 **floating** |
+| SW18-Narrow| 21.45–21.85 MHz            |      5k       |       | Pin 1 **floating** | 
